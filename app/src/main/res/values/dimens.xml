@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="team_list_item_height">30dp</dimen>
+    <dimen name="team_list_font_size">18sp</dimen>
+    <dimen name="team_list_label_font_size">24sp</dimen>
+    <dimen name="team_page_name_font_size">28sp</dimen>
+    <dimen name="team_page_wins_losses_font_size">56sp</dimen>
+</resources>

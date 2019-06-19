@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LeaguePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sortAscendingName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:onClick="onTeamNameLabelClicked"
+                app:srcCompat="@drawable/ic_arrow_up_black_24dp" />
+
+            <ImageView
+                android:id="@+id/sortDescendingName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:onClick="onTeamNameLabelClicked"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+            <TextView
+                android:id="@+id/teamNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:onClick="onTeamNameLabelClicked"
+                android:text="@string/team"
+                android:textSize="@dimen/team_list_label_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sortAscendingWins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamWinsLabelClicked"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_up_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/sortDescendingWins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamWinsLabelClicked"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                <TextView
+                    android:id="@+id/teamWinsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamWinsLabelClicked"
+                    android:text="@string/wins_short"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/team_list_label_font_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sortAscendingLosses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamLossesLabelClicked"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_up_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/sortDescendingLosses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamLossesLabelClicked"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                <TextView
+                    android:id="@+id/teamLossesLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onTeamLossesLabelClicked"
+                    android:text="@string/losses_short"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/team_list_label_font_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teamRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
